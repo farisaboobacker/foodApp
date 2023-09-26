@@ -1,0 +1,55 @@
+category
+  categoryId       int pk identity
+  name             varchar(50)
+  imageUrl         varchar(max)
+  isActive         bit
+  createdDate      datetime
+
+Products
+  ProductId        int pk identity
+  name             varchar(50)
+  description      varchar(max)
+  Price            decimal
+  Quantity         int
+  imageUrl         varchar(max)
+  categoryId       int fk cascade
+  isActive         bit
+  createdDate      datetime
+
+Cart
+  cartId           int pk identity
+  ProductId        int fk cascade
+  Quantity         int
+  UserId           int fk cascade
+  timestambs
+
+Users
+  UserId           int pk identity
+  name             varchar(50)
+  Username         varchar(50)
+  Mobile           varchar(50)
+  Email            varchar(50)
+  Address          varchar(max)
+  Password         varchar(max)
+  createdDate      datetime
+
+Orders
+  OrderDetailsId    int pk identity
+  OrderNo           varchar unique
+  ProductId         int fk cascade
+  Quantity          int
+  UserId            int fk cascade
+  status            varchar(50)
+  paymentId         int fk cascade
+  orderDate         datetime
+
+payment
+  paymentId         int pk identity
+  name              varchar(50)
+  cartNo            varchar(50)
+  expiryDate        varchar(50)
+  cvv               int
+  paymentMode       varchar(50)
+
+
+
