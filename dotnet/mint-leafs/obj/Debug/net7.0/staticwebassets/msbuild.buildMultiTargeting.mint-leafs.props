@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\mint-leafs.props" />
+</Project>

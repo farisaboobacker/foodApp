@@ -116,6 +116,8 @@ export class ProductComponent implements OnInit {
     this.Sproduct.addProducts(this.productForm.value).subscribe((res: any) => {
       console.log(res)
     });
+
+
     // if (this.product.productName?.trim()) {
     //   console.log(this.product.id)
     //   if (this.product.id) {
@@ -156,6 +158,7 @@ export class ProductComponent implements OnInit {
   //   return id;
   // }
 
+  
   getSeverity(status: string) {
     switch (status) {
       case 'INSTOCK':
